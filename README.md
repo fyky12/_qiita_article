@@ -1,24 +1,16 @@
-# README
+# Qiita_article
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## ＊qiita（キータ）の人気記事直近3日間上位30件をAPIで取得できるwebアプリ＊
+- 集計時間：リアルタイム
+- 集計期間：現時刻〜3日前の同時刻（作成日時）
+- 表示内容：LGTM数(上位30件)、記事タイトル、作成日時、タグ、ユーザーID(qiita_id)
+- 毎日9:00、上位3件のみ取得し、データベースに保存
 
-Things you may want to cover:
+### 実装モデル
+- itemsコントローラ
+- Index
+- Itemsモデル（データベースに保存する用）
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 実装メモ
+- 定時処理使ってモデルに保存
+- 最終的にLINE連携したい
